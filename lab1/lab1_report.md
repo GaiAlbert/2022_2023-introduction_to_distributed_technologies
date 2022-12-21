@@ -9,11 +9,18 @@ Date of create:
 Date of finished: 
 
 Ход решения:
-1. Разворачиваем minikube cluster, взаимодействуем с ним через minikube kubectl
-2. Пишем манифест на основе образа HashiCorp Vault, манифест в папке lab1, прокидываем порт 8200
+Предварительно был установлен и запущен Docker а также установлен и запущен Minikube согласно инструкции.
+
+Запуск пода
+После запуска кластера и проверки подключения, был создан манифест vault.yaml. Для развертывания пода была использована следущая команда:
+
+minikube kubectl -- apply -f vault.yaml
+Убедились, что под был успешно запущен.
 манифест:
-![image](https://user-images.githubusercontent.com/116584865/205444130-8dc7411d-9efc-46e7-b6db-a4531b38aa52.png)
-3. Создаём сервис доступа к контейнеру
+![image](https://user-images.githubusercontent.com/121129118/208902702-a52b0d32-2a5a-41f7-8ec7-078671730496.png)
+3. Создаём сервис доступа к контейнеру с помощью команды
+minikube kubectl -- expose pod vault --type=NodePort --port=8200
+После выполнения данной команды, приложение становится доступным по адресу http://localhost:8200 :
 ![image](https://user-images.githubusercontent.com/116584865/205443905-b7a983af-fc37-42e3-9c9c-69df6c99af0b.png)
 4. Прокидываем порт компьютера в контейнер и попадаем в vault по ссылке http://localhost:8200
 ![signin](https://user-images.githubusercontent.com/116584865/205444001-7152169b-63c5-4277-bcb9-9200ce843c17.png)
