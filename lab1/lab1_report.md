@@ -13,8 +13,8 @@ Date of finished:
 После запуска кластера и проверки подключения, был создан манифест vault.yaml. Для развертывания пода была использована следущая команда:
 minikube kubectl -- apply -f vault.yaml.
 Убедились, что под был успешно запущен.
-манифест:
-![image](https://user-images.githubusercontent.com/121129118/208902702-a52b0d32-2a5a-41f7-8ec7-078671730496.png).
+Манифест:
+![image](https://user-images.githubusercontent.com/121129118/208904006-0da09e12-95d4-4eeb-8add-fa0896a34a82.png)
 3. Создаём сервис доступа к контейнеру с помощью команды
 minikube kubectl -- expose pod vault --type=NodePort --port=8200
 ![image](https://user-images.githubusercontent.com/121129118/208903068-a98853bc-9e71-45b0-b9cb-20813bdbb508.png)
