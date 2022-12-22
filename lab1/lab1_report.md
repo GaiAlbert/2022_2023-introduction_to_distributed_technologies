@@ -23,6 +23,7 @@ Date of finished:
 ![image](https://user-images.githubusercontent.com/121129118/208903320-d7a366d3-c1ae-4045-9cc4-74b6c202531c.png)
 # Находим токен для входа в Vault
 8. Открываем логи и находим токен для входа в Vault при помощи команды minikube kubectl -- logs vault | findstr "Token"
+![image](https://user-images.githubusercontent.com/121129118/209163286-5bf725b2-7b82-4511-bf31-19ec3ceae66c.png)
 9. Авторизуемся и заходим в vault 
 10. ![image](https://user-images.githubusercontent.com/121129118/208904565-9707d9e7-4d10-4391-b2df-ad7bfac9773c.png)
 11. Останавливаем minikube cluster
