@@ -1,7 +1,7 @@
 apiVersion: apps/v1 
 kind: Deployment 
 metadata: 
-  name: laboratornaya2
+  name: laba2
   labels: 
     app: lab2-web-app
 spec: 
@@ -21,6 +21,6 @@ spec:
         - containerPort: 3000
         env: 
         - name: REACT_APP_USERNAME 
-          value: "Ilya German" 
+          value: "Albert" 
         - name: REACT_APP_COMPANY_NAME 
-          value: "ITMO" 
+          value: "VITMO" 
