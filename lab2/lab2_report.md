@@ -21,7 +21,8 @@ Date of finished:
 - `kubectl get svc` - проверяем созданный сервис
 ![image](https://user-images.githubusercontent.com/121129118/209106265-a0112e31-a8d9-4a8e-a82b-0ac35b5b55d6.png)
 3. Запускаем в `minikube` режим проброса портов (как в первой лабе) и подключаемся к нашим контейнерам через браузер.
-- `minikube service laba2` - с помощью этой команды подключаемся к контейнеру
+`minikube kubectl -- expose deploy laba2 type=LoadBalancer --port=3000`
+`minikube service laba2` - с помощью этой команды подключаемся к контейнеру
 ![image](https://user-images.githubusercontent.com/121129118/209110430-bcf9e878-371d-41dd-bf0b-c837a1eb3dab.png)
 ![image](https://user-images.githubusercontent.com/121129118/209110498-40c18acc-6575-4938-b9d6-da6162d447ed.png)
 4. Проверяем переменные `REACT_APP_USERNAME`, `REACT_APP_COMPANY_NAME` и `Container name`. Первые 2 не меняются, потому что мы их статично прописали в манифесте, третье  изменяется после обновления страницы в следствие того, что сервис LoadBalancer распределяет нагрузку между двумя нодами.
