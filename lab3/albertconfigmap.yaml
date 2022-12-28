@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: albertconfigmap
+data:
+  react_app_username: "Albert"
+  react_app_company_name: "VITMO"
