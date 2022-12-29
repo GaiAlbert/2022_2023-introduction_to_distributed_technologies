@@ -70,3 +70,4 @@ spec:
 - Переходим на страницу нашего FQDN `https://albert.laba3.cloud`, ReactApp выдаёт белый экран. Как я понял, это связано в с тем, что запуск ведётся на Windows, где это реализовано проблемно.
 - Сертификат: ![albertcert](https://user-images.githubusercontent.com/121129118/209859326-3988397a-319d-403d-9021-f5c1f3eb2568.png)
 ### 7. Схема организации контейнеров и сервисов, нарисованная в draw.io
+- ![image](https://user-images.githubusercontent.com/121129118/209955763-72dfc5b5-ccc4-486e-8135-918fee372539.png)
